@@ -1,2 +1,869 @@
-//Write permissions.yml
-//REMOVE THESE COMMENTS ONCE COMPLETED!
+//These are the ShadowBlox permissions file the VonJames gave me, for some reason, the prefix only comes when I talk
+//while the server is reloading. If it is not to do with this, please tell me in game what i need for them to stay
+//on peoples names. Thanks! ~Geo
+groups:
+  Guest:
+    default: true
+    prefix: '&f[&7Guest&f] &7'
+    options:
+      rank: '100'
+      rank-ladder: Free
+    permissions:
+    - bm.baninfo
+    - bm.notify
+    - shadowlinks.*
+    - shadowbuild.build
+    - minigame.join
+    - essentials.worlds.plots
+    - essentials.worlds.flatlands
+    - essentials.worlds.spawn
+    - essentials.help
+    - colouredplate.yellow
+    - essentials.me
+    - essentials.time
+    - essentials.mail
+    - essentials.afk.kickexempt
+    - essentials.motd
+    - modreq.status
+    - modreq.request
+    - essentials.sethome
+    - essentials.home
+    - plotme.use
+    - essentials.signs.use.trade
+    - essentials.signs.use.warp
+    - essentials.msg
+    - essentials.spawn
+    - essentials.back
+    - essentials.warp
+    - essentials.warp.*
+    - essentials.signs.use.balance
+    - essentials.signs.use.buy
+    - essentials.signs.use.disposal
+    - essentials.signs.use.free
+    - essentials.signs.use.kit
+    - essentials.signs.use.protection
+    - essentials.signs.use.mail
+    - essentials.signs.use.sell
+    - essentials.warp.list
+    - multiverse.core.list.worlds
+    - multiverse.help
+    - multiverse.core.info
+    - multiverse.core.list.who
+    - multiverse.core.spawn.self
+    - essentials.tpaccept
+    - essentials.tpdeny
+    - essentials.ban.notify
+    - essentials.mail.send
+    - essentials.sethome.multiple
+    - essentials.delhome
+    - essentials.kit
+    - essentials.rules
+    - essentials.sethome.multiple.3
+    - essentials.getpos
+    - essentials.list
+    - essentials.ping
+    - essentials.pay
+    - essentials.afk
+    - essentials.balance
+    - essentials.clearinventory
+    worlds:
+      spawn:
+        permissions:
+        - chesscraft.commands.create.game
+        - chesscraft.commands.invite
+        - chesscraft.commands.join
+        - chesscraft.commands.move
+        - chesscraft.commands.offer.draw
+        - chesscraft.commands.offer.swap
+        - chesscraft.commands.resign
+        - chesscraft.commands.archive
+        - chesscraft.commands.tp
+        - chesscraft.commands.win
+      survival:
+        permissions:
+        - lwc.shownotices
+        - lwc.protect
+      minigames: {}
+      end:
+        permissions:
+        - null
+      flatlands:
+        permissions:
+        - essentials.fly
+        - nocheat.checks.fight.*
+        - nocheat.checks.moving.*
+        - lwc.shownotices
+        - lwc.protect
+        - essentials.jump
+        - essentials.back.ondeath
+      plots:
+        permissions:
+        - essentials.back.ondeath
+        - plotme.use.remove
+        - plotme.use.add
+        - nocheat.checks.fight.*
+        - antigrief.build
+        - permissions.build
+        - lwc.shownotices
+        - lwc.protect
+        - essentials.build
+        - plotme.limit.3
+        - nocheat.checks.moving.*
+        - essentials.fly
+        - essentials.jump
+        - essentials.back.ondeath
+      freebuild:
+        permissions:
+        - essentials.fly
+        - nocheat.checks.moving.*
+        - essentials.jump
+        - essentials.back.ondeath
+        - lwc.shownotices
+        - lwc.protect
+        - nocheat.checks.fight.*
+  Settler:
+    default: true
+    prefix: '&f[&eSettler&f] &e'
+    options:
+      rank: '90'
+      rank-ladder: Free
+    inheritance:
+    - Guest
+    permissions:
+    - essentials.me
+    worlds:
+      spawn:
+        permissions:
+        - null
+      survival:
+        permissions:
+        - null
+      nether:
+        permissions:
+        - null
+      end:
+        permissions:
+        - null
+      flatlands:
+        permissions:
+        - null
+      plots:
+        permissions:
+        - null
+      freebuild:
+        permissions:
+        - null
+  Citizen:
+    default: false
+    prefix: '&f[&dCitizen&f] &d'
+    inheritance:
+    - Settler
+    options:
+      rank: '80'
+      rank-ladder: Free
+    permissions:
+    - colouredplate.lightpurple
+    - -colouredplate.yellow
+    - essentials.realname
+    - essentials.sethome.multiple.4
+    - essentials.whois
+    - essentials.chat.question
+    - essentials.chat.shout
+    - essentials.chat.url
+    - essentials.info
+    - essentials.balancetop
+    - essentials.help
+    - essentials.depth
+    worlds:
+      spawn:
+        permissions:
+        - essentials.gamemode
+      survival:
+        permissions:
+        - permissions.build
+        - essentials.build
+        - antigrief.build
+      nether:
+        permissions:
+        - permissions.build
+        - essentials.build
+        - antigrief.build
+      end:
+        permissions:
+        - permissions.build
+        - essentials.build
+        - antigrief.build
+      flatlands:
+        permissions:
+        - essentials.gamemode
+        - antigrief.build
+        - permissions.build
+        - essentials.build
+      plots:
+        permissions:
+        - essentials.gamemode
+        - essentials.break.bedrock
+        - essentials.more
+        - nocheat.checks.blockbreak.*
+        - nocheat.checks.blockplace.*
+        - plotme.limit.5
+      freebuild:
+        permissions:
+        - essentials.break.bedrock
+        - essentials.more
+        - nocheat.checks.blockplace.*
+        - permissions.build
+        - nocheat.checks.blockbreak.*
+        - essentials.build
+        - antigrief.build
+  Veteran:
+    default: false
+    prefix: '&f[&cVeteran&f]&c'
+    inheritance:
+    - Citizen
+    options:
+      rank: '70'
+      rank-ladder: Free
+    permissions:
+    - tl.timelapse
+    - essentials.seen
+    - colouredplate.red
+    - -colouredplate.lightpurple
+    - essentials.hat
+    - worldguard.stack
+    - worldguard.region.info
+    - essentials.msg.color
+    - essentials.tpa
+    - essentials.tpahere
+    - essentials.ext
+    - essentials.sethome.multiple.6
+    - worldguard.region.teleport.*
+    - essentials.msg.format
+    - essentials.msg.url
+    worlds:
+      spawn:
+        permissions:
+        - null
+      survival:
+        permissions:
+        - antigrief.bypass.place
+        - antigrief.bypass.ignite
+        - antigrief.bypass.bucket.lava
+        - antigrief.bypass.bucket.water
+        - antigrief.bypass.firecharge
+        - antigrief.bypass.destroy
+      nether:
+        permissions:
+        - antigrief.bypass.place
+        - antigrief.bypass.ignite
+        - antigrief.bypass.bucket.lava
+        - antigrief.bypass.bucket.water
+        - antigrief.bypass.firecharge
+        - antigrief.bypass.destroy
+      end:
+        permissions:
+        - antigrief.bypass.place
+        - antigrief.bypass.ignite
+        - antigrief.bypass.bucket.lava
+        - antigrief.bypass.bucket.water
+        - antigrief.bypass.firecharge
+        - antigrief.bypass.destroy
+      flatlands:
+        permissions:
+        - essentials.item.*
+        - essentials.item
+        - essentials.itemspawn.item-all
+        - antigrief.bypass.place
+        - antigrief.bypass.ignite
+        - antigrief.bypass.bucket.lava
+        - antigrief.bypass.bucket.water
+        - antigrief.bypass.firecharge
+        - antigrief.bypass.destroy
+      plots:
+        permissions:
+        - essentials.item.*
+        - essentials.item
+        - essentials.itemspawn.item-all
+        - antigrief.bypass.place
+        - plotme.limit.15
+        - antigrief.bypass.ignite
+        - antigrief.bypass.bucket.lava
+        - antigrief.bypass.bucket.water
+        - antigrief.bypass.firecharge
+        - antigrief.bypass.destroy
+      freebuild:
+        permissions:
+        - essentials.item.*
+        - essentials.item
+        - essentials.itemspawn.item-all
+        - antigrief.bypass.place
+        - antigrief.bypass.ignite
+        - antigrief.bypass.bucket.lava
+        - antigrief.bypass.bucket.water
+        - antigrief.bypass.firecharge
+        - antigrief.bypass.destroy
+  Apprentice:
+    default: false
+    prefix: '&f[&bApprentice&f] &b'
+    inheritance:
+    - Veteran
+    options:
+      rank: '60'
+      rank-ladder: Free
+    permissions:
+    - colouredplate.aqua
+    - -colouredplate.red
+    - worldguard.locate
+    - essentials.balance.others
+    - essentials.sethome.multiple.8
+    - essentials.ignore
+    worlds:
+      spawn:
+        permissions:
+        - null
+      survival:
+        permissions:
+        - null
+      nether:
+        permissions:
+        - null
+      end:
+        permissions:
+        - null
+      flatlands:
+        permissions:
+        - null
+      plots:
+        permissions:
+        - plotme.limit.30
+      freebuild:
+        permissions:
+        - null
+  Architect:
+    default: false
+    prefix: '&f[&5Architect&f]&5'
+    inheritance:
+    - Apprentice
+    options:
+      rank: '50'
+      rank-ladder: Free
+    permissions:
+    - colouredplate.darkpurple
+    - -colouredplate.aqua
+    - essentials.powertool
+    - essentials.powertool.append
+    - essentials.sethome.multiple.unlimited
+    - essentials.powertooltoggle
+    worlds:
+      spawn:
+        permissions:
+        - null
+      survival:
+        permissions:
+        - null
+      nether:
+        permissions:
+        - null
+      end:
+        permissions:
+        - null
+      flatlands:
+        permissions:
+        - essentials.compass
+        - essentials.ext
+        - essentials.bigtree
+        - essentials.tree
+      plots:
+        permissions:
+        - essentials.compass
+        - essentials.ext
+        - essentials.bigtree
+        - plotme.limit.30
+        - essentials.tree
+      freebuild:
+        permissions:
+        - essentials.compass
+        - essentials.ext
+        - essentials.bigtree
+        - essentials.tree
+  Baron:
+    default: false
+    prefix: '&f[&aBaron&f] &a'
+    inheritance:
+    - Architect
+    permissions:
+    - bm.kick
+    - essentials.time.set
+    - colouredplate.green
+    - -colouredplate.darkpurple
+    - nocheat.checks.chat.*
+    - essentials.thunder
+    - essentials.signs.break.balance
+    - essentials.signs.break.disposal
+    - essentials.signs.break.info
+    - essentials.signs.break.info
+    - essentials.signs.break.protection
+    - essentials.signs.break.trade
+    - essentials.signs.break.warp
+    - essentials.signs.create.balance
+    - essentials.signs.create.disposal
+    - essentials.signs.create.info
+    - essentials.signs.create.trade
+    - essentials.signs.create.mail
+    - essentials.signs.break.mail
+    - essentials.signs.create.protection
+    - essentials.signs.create.warp
+    - essentials.signs.magic
+    - essentials.chat.color
+    - essentials.tphere
+    - essentials.tp
+    - essentials.tp.others
+    - essentials.joinfullserver
+    - essentials.nick
+    - essentials.tptoggle
+    - essentials.tpaall
+    - essentials.kick
+    - essentials.weather
+    - essentials.tppos
+    - essentials.nick.color
+    - essentials.signs.color
+    - essentials.signs.format
+    worlds:
+      spawn:
+        permissions:
+        - essentials.setwarp
+      survival:
+        permissions:
+        - essentials.setwarp
+      nether:
+        permissions:
+        - essentials.setwarp
+      end:
+        permissions:
+        - essentials.setwarp
+      flatlands:
+        permissions:
+        - essentials.signs.use.time
+        - antigrief.bypass.spawnegg.*
+        - essentials.setwarp
+        - essentials.spawner.*
+        - essentials.signs.break.free
+        - essentials.signs.use.weather
+        - essentials.signs.use.weather
+        - essentials.signs.break.weather
+        - essentials.signs.break.time
+        - essentials.signs.create.free
+        - essentials.signs.create.weather
+        - essentials.signs.create.time
+      plots:
+        permissions:
+        - essentials.signs.use.time
+        - essentials.setwarp
+        - antigrief.bypass.spawnegg.*
+        - essentials.spawner.*
+        - essentials.signs.break.free
+        - essentials.signs.use.weather
+        - essentials.signs.use.weather
+        - essentials.signs.break.weather
+        - essentials.signs.break.time
+        - essentials.signs.create.free
+        - essentials.signs.create.weather
+        - essentials.signs.create.time
+      freebuild:
+        permissions:
+        - essentials.signs.use.time
+        - essentials.setwarp
+        - antigrief.bypass.spawnegg.*
+        - essentials.spawner.*
+        - essentials.signs.break.free
+        - essentials.signs.use.weather
+        - essentials.signs.use.weather
+        - essentials.signs.break.weather
+        - essentials.signs.break.time
+        - essentials.signs.create.free
+        - essentials.signs.create.weather
+        - essentials.signs.create.time
+  Lord:
+    default: false
+    prefix: '&f[&9Lord&f] &9'
+    inheritance:
+    - Baron
+    permissions:
+    - -worldedit.butcher
+    - colouredplate.blue
+    - -colouredplate.green
+    - essentials.near
+    - essentials.getpos.others
+    worlds:
+      spawn:
+        permissions:
+        - null
+      survival:
+        permissions:
+        - null
+      nether:
+        permissions:
+        - null
+      end:
+        permissions:
+        - null
+      flatlands:
+        permissions:
+        - essentials.spawnmob
+        - essentials.signs.use.spawnmob
+        - antigrief.bypass.spawnegg.ocelot
+        - antigrief.bypass.spawnegg.chicken
+        - worldedit.*
+        - antigrief.bypass.spawnegg.cow
+        - antigrief.bypass.spawnegg.pig
+        - antigrief.bypass.spawnegg.mooshroom
+        - antigrief.bypass.spawnegg.sheep
+        - antigrief.bypass.spawnegg.wolf
+        - antigrief.bypass.spawnegg.squid
+        - antigrief.bypass.spawnegg.villager
+        - essentials.spawner.ocelot
+        - essentials.spawner.chicken
+        - essentials.spawner.cow
+        - essentials.spawner.pig
+        - essentials.spawner.mooshroom
+        - essentials.spawner.sheep
+        - essentials.spawner.wolf
+        - essentials.spawner.squid
+        - essentials.spawner.villager
+        - essentials.spawnmob.ocelot
+        - essentials.spawnmob.chicken
+        - essentials.spawnmob.cow
+        - essentials.spawnmob.pig
+        - essentials.spawnmob.mooshroom
+        - essentials.spawnmob.sheep
+        - essentials.spawnmob.wolf
+        - essentials.spawnmob.squid
+        - essentials.spawnmob.villager
+      plots:
+        permissions:
+        - antigrief.bypass.spawnegg.ocelot
+        - essentials.spawnmob
+        - antigrief.bypass.spawnegg.chicken
+        - antigrief.bypass.spawnegg.cow
+        - antigrief.bypass.spawnegg.pig
+        - antigrief.bypass.spawnegg.mooshroom
+        - essentials.signs.use.spawnmob
+        - antigrief.bypass.spawnegg.sheep
+        - antigrief.bypass.spawnegg.wolf
+        - worldedit.*
+        - antigrief.bypass.spawnegg.squid
+        - antigrief.bypass.spawnegg.villager
+        - essentials.spawner.ocelot
+        - essentials.spawner.chicken
+        - essentials.spawner.cow
+        - essentials.spawner.pig
+        - essentials.spawner.mooshroom
+        - essentials.spawner.sheep
+        - essentials.spawner.wolf
+        - essentials.spawner.squid
+        - essentials.spawner.villager
+        - essentials.spawnmob.ocelot
+        - essentials.spawnmob.chicken
+        - essentials.spawnmob.cow
+        - essentials.spawnmob.pig
+        - essentials.spawnmob.mooshroom
+        - essentials.spawnmob.sheep
+        - essentials.spawnmob.wolf
+        - essentials.spawnmob.squid
+        - essentials.spawnmob.villager
+      freebuild:
+        permissions:
+        - antigrief.bypass.spawnegg.ocelot
+        - antigrief.bypass.spawnegg.chicken
+        - antigrief.bypass.spawnegg.cow
+        - antigrief.bypass.spawnegg.pig
+        - worldedit.*
+        - antigrief.bypass.spawnegg.mooshroom
+        - antigrief.bypass.spawnegg.sheep
+        - antigrief.bypass.spawnegg.wolf
+        - antigrief.bypass.spawnegg.squid
+        - antigrief.bypass.spawnegg.villager
+        - essentials.spawnmob
+        - essentials.spawner.ocelot
+        - essentials.signs.use.spawnmob
+        - essentials.spawner.chicken
+        - essentials.spawner.cow
+        - essentials.spawner.pig
+        - essentials.spawner.mooshroom
+        - essentials.spawner.sheep
+        - essentials.spawner.wolf
+        - essentials.spawner.squid
+        - essentials.spawner.villager
+        - essentials.spawnmob.ocelot
+        - essentials.spawnmob.chicken
+        - essentials.spawnmob.cow
+        - essentials.spawnmob.pig
+        - essentials.spawnmob.mooshroom
+        - essentials.spawnmob.sheep
+        - essentials.spawnmob.wolf
+        - essentials.spawnmob.squid
+        - essentials.spawnmob.villager
+  Emperor:
+    default: false
+    prefix: '&f[&3Emperor&f] &3'
+    inheritance:
+    - Lord
+    permissions:
+    - colouredplate.darkaqua
+    - -colouredplate.blue
+    - worldguard.region.addowner.own.*
+    - worldguard.region.remove.own.*
+    - worldguard.region.addmember.own.*
+    - worldguard.region.removeowner.own.*
+    - worldguard.region.setpriority.own.*
+    - worldguard.region.setparent.own.*
+    - worldguard.region.select.own.*
+    - worldguard.region.flag.regions.own.*
+    - worldguard.region.removemember.own.*
+    - commandspy.set
+    - worldguard.region.list
+    - essentials.socialspy
+    - essentials.chat.spy
+    worlds:
+      spawn:
+        permissions:
+        - null
+      survival:
+        permissions:
+        - worldguard.region.define
+        - worldguard.region.redefine.own
+      nether:
+        permissions:
+        - worldguard.region.define
+        - worldguard.region.redefine.own
+      end:
+        permissions:
+        - worldguard.region.define
+        - worldguard.region.redefine.own
+      flatlands:
+        permissions:
+        - worldguard.region.define
+        - voxelsniper.litesniper
+        - worldguard.region.redefine.own
+      plots:
+        permissions:
+        - antigrief.bypass.spawnegg.*
+        - essentials.spawner.*
+        - voxelsniper.litesniper
+        - essentials.signs.break.free
+        - essentials.signs.use.weather
+        - essentials.signs.break.weather
+        - essentials.signs.break.time
+        - essentials.signs.create.free
+        - essentials.signs.create.weather
+        - essentials.signs.create.time
+      freebuild:
+        permissions:
+        - antigrief.bypass.spawnegg.*
+        - essentials.spawner.*
+        - essentials.signs.break.free
+        - worldguard.region.define
+        - worldguard.region.redefine.own
+        - essentials.signs.use.weather
+        - essentials.signs.break.weather
+        - essentials.signs.break.time
+        - voxelsniper.litesniper
+        - essentials.signs.create.free
+        - essentials.signs.create.weather
+        - essentials.signs.create.time
+  PluginDeveloper:
+    default: false
+    prefix: '&0[&3Plugin&6Dev&0]&6'
+    inheritance:
+    - Emperor
+    permissions:
+    - bm.unmute
+    - bm.tempmute
+    - bm.mute
+    - bm.unbanip
+    - bm.banip
+    - bm.unban
+    - bm.tempban
+    - bm.ban
+    - -colouredplate.darkgreen
+    - colouredplate.gold
+    - lwc.mod
+    - essentials.gc
+    - logblock.*
+    - essentials.spawnmob
+    - essentials.gm
+    - essentials.essentials
+    - essentials.gc
+    - modreq.*
+    - hawkeye.*
+    - plotme.admin
+    - backup.*
+    - essentials.delwarp
+    - lwc.admin.remove
+    - essentials.home.others
+    - essentials.tpo
+    - essentials.tpohere
+    - essentials.teleport.hidden
+    - essentials.sethome.others
+    - essentials.broadcast
+    - essentials.burn
+    - essentials.geoip.show
+    - essentials.signs.override
+    - essentials.signs.trade.override
+    - essentials.antioch
+    - essentials.backup
+    - essentials.ban
+    - essentials.unban
+    - essentials.unbanip
+    - essentials.tempban
+    - essentials.tempban.offline
+    - essentials.seen
+    - essentials.warp.otherplayers
+    - essentials.seen.*
+    - essentials.lightning
+    - essentials.lightning.others
+    - essentials.mute
+    - essentials.afk.others
+    - essentials.list.hidden
+    - essentials.invsee
+    - essentials.invsee.modify
+    - essentials.geoip.show
+    - essentials.warp.overwrite.*
+    - essentials.ban.offline
+    - essentials.banip
+    - essentials.broadcast
+    - essentials.delhome.others
+    worlds:
+      spawn:
+        permissions:
+        - essentials.killall
+      survival:
+        permissions:
+        - worldguard.*
+        - nocheat.*
+        - worldguard.region.addowner.*
+        - worldguard.region.remove.*
+        - worldguard.region.addmember.*
+        - worldguard.region.removeowner.*
+        - worldguard.region.setpriority.*
+        - worldguard.region.setparent.*
+        - worldguard.region.select.*
+        - worldguard.region.flag.regions.*
+        - worldguard.region.removemember.*
+      nether:
+        permissions:
+        - worldguard.*
+        - nocheat.*
+        - worldguard.region.addowner.*
+        - worldguard.region.remove.*
+        - worldguard.region.addmember.*
+        - worldguard.region.removeowner.*
+        - worldguard.region.setpriority.*
+        - worldguard.region.setparent.*
+        - worldguard.region.select.*
+        - worldguard.region.flag.regions.*
+        - worldguard.region.removemember.*
+      end:
+        permissions:
+        - worldguard.*
+        - worldguard.region.addowner.*
+        - worldguard.region.remove.*
+        - worldguard.region.addmember.*
+        - worldguard.region.removeowner.*
+        - worldguard.region.setpriority.*
+        - worldguard.region.setparent.*
+        - worldguard.region.select.*
+        - worldguard.region.flag.regions.*
+        - worldguard.region.removemember.*
+        - nocheat.*
+      flatlands:
+        permissions:
+        - worldguard.*
+        - essentials.killall
+        - nocheat.*
+        - essentials.vanish
+        - essentials.vanish.see
+        - worldguard.region.addowner.*
+        - worldguard.region.remove.*
+        - worldguard.region.addmember.*
+        - worldguard.region.removeowner.*
+        - worldguard.region.setpriority.*
+        - worldguard.region.setparent.*
+        - worldguard.region.select.*
+        - worldguard.region.flag.regions.*
+        - worldguard.region.removemember.*
+        - essentials.top
+      plots:
+        permissions:
+        - essentials.top
+        - worldguard.*
+        - nocheat.*
+        - essentials.killall
+        - essentials.vanish
+        - worldguard.region.addowner.*
+        - worldguard.region.remove.*
+        - worldguard.region.addmember.*
+        - worldguard.region.removeowner.*
+        - worldguard.region.setpriority.*
+        - worldguard.region.setparent.*
+        - worldguard.region.select.*
+        - worldguard.region.flag.regions.*
+        - worldguard.region.removemember.*
+        - essentials.vanish.see
+      freebuild:
+        permissions:
+        - essentials.top
+        - essentials.vanish
+        - nocheat.*
+        - worldguard.region.addowner.*
+        - worldguard.region.remove.*
+        - worldguard.region.addmember.*
+        - worldguard.region.removeowner.*
+        - worldguard.region.setpriority.*
+        - worldguard.region.setparent.*
+        - worldguard.region.select.*
+        - worldguard.region.flag.regions.*
+        - worldguard.region.removemember.*
+        - essentials.killall
+        - essentials.vanish.see
+        - worldguard.*
+  Staff:
+    default: false
+    prefix: '&f[&2Staff&f]&2'
+    inheritance:
+    - PluginDeveloper
+    permissions:
+    - essentials.nick.format
+    - essentials.sudo
+    - essentials.nick.others
+    - essentials.gamemode.*
+    - essentials.gamemode
+    - colouredplate.darkgreen
+    - -colouredplate.darkaqua
+  CoOwner:
+    default: false
+    prefix: '&f[&4CoOwner&f] &4'
+    inheritance:
+    - Staff
+    permissions:
+    - -colouredplate.gray
+    - -colouredplate.darkgray
+    - -colouredplate.darkblue
+    - -colouredplate.black
+    - -colouredplate.gold
+    - colourededplate.darkred
+    - '*'
+  Camera:
+    default: false
+    prefix: '&f[&4Camera&f] &4'
+    inheritance:
+    - CoOwner
+    permissions:
+    - '*'
+  Owner:
+    default: false
+    prefix: '&f[&4Owner&f] &4'
+    inheritance:
+    - Camera
+    permissions:
+    - '*'
