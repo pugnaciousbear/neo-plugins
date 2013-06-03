@@ -1,4 +1,6 @@
-//Plotworld doesnt have a path
+//Plotworld doesnt have a path to other plots.
+//This needs fixing as it is hard to tell where the ends of someones plot is.
+//Remove comments when completed.
 worlds:
   plotworld:
     PlotAutoLimit: 3
