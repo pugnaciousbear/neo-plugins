@@ -1,4 +1,4 @@
 neo-plugins
 ===========
 
-Me and the Devs do some work no plugind here.
+Me and the Devs do some work on plugins here.
