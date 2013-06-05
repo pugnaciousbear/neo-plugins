@@ -1,0 +1,6 @@
+//I cant get prefixes
+enable: true
+message-format: <%prefix%player%suffix> %message
+global-message-format: <%prefix%player%suffix> &f%message
+ranged-mode: false
+chat-range: 100.0
