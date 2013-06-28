@@ -1,6 +1,4 @@
-//These are the ShadowBlox permissions file the VonJames gave me, for some reason, the prefix only comes when I talk
-//while the server is reloading. If it is not to do with this, please tell me in game what i need for them to stay
-//on peoples names. Thanks! ~Geo
+//This is all done now. I am changing host soon so i need to keep this on gh
 groups:
   Guest:
     default: true
