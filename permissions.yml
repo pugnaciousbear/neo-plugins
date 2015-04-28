@@ -1,11 +1,10 @@
-//This is all done now. I am changing host soon so i need to keep this on gh
 groups:
   Guest:
-    default: true
-    prefix: '&f[&7Guest&f] &7'
     options:
       rank: '100'
       rank-ladder: Free
+      prefix: '&f[&7Guest&f] &7'
+      default: true
     permissions:
     - bm.baninfo
     - bm.notify
@@ -120,11 +119,11 @@ groups:
         - lwc.protect
         - nocheat.checks.fight.*
   Settler:
-    default: true
-    prefix: '&f[&eSettler&f] &e'
     options:
       rank: '90'
       rank-ladder: Free
+      prefix: '&f[&eSettler&f] &e'
+      default: true
     inheritance:
     - Guest
     permissions:
@@ -152,13 +151,13 @@ groups:
         permissions:
         - null
   Citizen:
-    default: false
-    prefix: '&f[&dCitizen&f] &d'
     inheritance:
     - Settler
     options:
       rank: '80'
       rank-ladder: Free
+      prefix: '&f[&dCitizen&f] &d'
+      default: false
     permissions:
     - colouredplate.lightpurple
     - -colouredplate.yellow
@@ -215,13 +214,13 @@ groups:
         - essentials.build
         - antigrief.build
   Veteran:
-    default: false
-    prefix: '&f[&cVeteran&f]&c'
     inheritance:
     - Citizen
     options:
       rank: '70'
       rank-ladder: Free
+      prefix: '&f[&cVeteran&f]&c'
+      default: false
     permissions:
     - tl.timelapse
     - essentials.seen
@@ -301,13 +300,13 @@ groups:
         - antigrief.bypass.firecharge
         - antigrief.bypass.destroy
   Apprentice:
-    default: false
-    prefix: '&f[&bApprentice&f] &b'
     inheritance:
     - Veteran
     options:
       rank: '60'
       rank-ladder: Free
+      prefix: '&f[&bApprentice&f] &b'
+      default: false
     permissions:
     - colouredplate.aqua
     - -colouredplate.red
@@ -338,13 +337,13 @@ groups:
         permissions:
         - null
   Architect:
-    default: false
-    prefix: '&f[&5Architect&f]&5'
     inheritance:
     - Apprentice
     options:
       rank: '50'
       rank-ladder: Free
+      prefix: '&f[&5Architect&f]&5'
+      default: false
     permissions:
     - colouredplate.darkpurple
     - -colouredplate.aqua
@@ -385,8 +384,6 @@ groups:
         - essentials.bigtree
         - essentials.tree
   Baron:
-    default: false
-    prefix: '&f[&aBaron&f] &a'
     inheritance:
     - Architect
     permissions:
@@ -481,9 +478,10 @@ groups:
         - essentials.signs.create.free
         - essentials.signs.create.weather
         - essentials.signs.create.time
+    options:
+      prefix: '&f[&aBaron&f] &a'
+      default: false
   Lord:
-    default: false
-    prefix: '&f[&9Lord&f] &9'
     inheritance:
     - Baron
     permissions:
@@ -601,9 +599,10 @@ groups:
         - essentials.spawnmob.wolf
         - essentials.spawnmob.squid
         - essentials.spawnmob.villager
+    options:
+      prefix: '&f[&9Lord&f] &9'
+      default: false
   Emperor:
-    default: false
-    prefix: '&f[&3Emperor&f] &3'
     inheritance:
     - Lord
     permissions:
@@ -669,9 +668,10 @@ groups:
         - essentials.signs.create.free
         - essentials.signs.create.weather
         - essentials.signs.create.time
+    options:
+      prefix: '&f[&3Emperor&f] &3'
+      default: false
   PluginDeveloper:
-    default: false
-    prefix: '&0[&3Plugin&6Dev&0]&6'
     inheritance:
     - Emperor
     permissions:
@@ -732,11 +732,9 @@ groups:
     - essentials.broadcast
     - essentials.delhome.others
     worlds:
-      spawn:
+      world:
         permissions:
         - essentials.killall
-      survival:
-        permissions:
         - worldguard.*
         - nocheat.*
         - worldguard.region.addowner.*
@@ -825,22 +823,33 @@ groups:
         - essentials.killall
         - essentials.vanish.see
         - worldguard.*
+    options:
+      prefix: '&0[&3Plugin&6Dev&0]&6'
+      default: false
   Staff:
-    default: false
-    prefix: '&f[&2Staff&f]&2'
     inheritance:
     - PluginDeveloper
     permissions:
     - essentials.nick.format
-    - essentials.sudo
-    - essentials.nick.others
-    - essentials.gamemode.*
-    - essentials.gamemode
     - colouredplate.darkgreen
-    - -colouredplate.darkaqua
-  CoOwner:
+    - colouredplate.darkaqua
+    - worldedit.*
+	
+    options:
+      prefix: '&f[&2Staff&f]&2'
+      default: false
+	
+  HeadAdmin:
+   inheritance:
+  - Staff 
+  permissions:
+   - '*'
+   options:
+    prefix: '&f[&6HeadAdmin&f]
     default: false
-    prefix: '&f[&4CoOwner&f] &4'
+	
+	
+  CoOwner:
     inheritance:
     - Staff
     permissions:
@@ -851,17 +860,69 @@ groups:
     - -colouredplate.gold
     - colourededplate.darkred
     - '*'
+    options:
+      prefix: '&f[&4CoOwner&f] &4'
+      default: false
   Camera:
-    default: false
-    prefix: '&f[&4Camera&f] &4'
     inheritance:
     - CoOwner
     permissions:
     - '*'
+    options:
+      prefix: '&f[&4Camera&f] &4'
+      default: false
   Owner:
-    default: false
-    prefix: '&f[&4Owner&f] &4'
     inheritance:
     - Camera
     permissions:
     - '*'
+    options:
+      prefix: '&f[&4Owner&f] &4'
+      default: false
+schema-version: 1
+users:
+  d67e506d-5720-46b9-9feb-e6e7ea9c8e7d:
+    permissions:
+    - '*'
+    group:
+    - Owner
+    options:
+      name: VotexGaming
+  207c4038-22f5-435b-ad86-72802da2b395:
+    group:
+    - CoOwner
+    options:
+      name: ZebraGames
+  f063e8fe-3ea2-4c20-b864-e46cb86aafb8:
+    group:
+    - CoOwner
+    options:
+      name: _DJ_REX_
+  92467ead-e38b-4c2a-8c26-ce869aae6a00:
+    group:
+    - Staff
+    options:
+      name: Erah
+  6ef4b556-3f18-47e8-a9ac-db8a4b974233:
+    group:
+    - Citizen
+    options:
+      name: Zhua
+  66ecd070-ba34-46a8-8fbe-05bc01b713e0:
+    group:
+    - Citizen
+    options:
+      name: pooeymcc
+  6f724d9e-c7c3-4a05-80e4-3fdc8373ed6a:
+    group:
+    - Staff
+    options:
+      name: _Java_
+  612129b8-7497-4fb8-8c22-e5f0062179aa:
+    group:
+    - Citizen
+    options:
+      name: Sinic3279
+  5bab17ce-4b75-4593-af77-c4c9e0de774c:
+    group:
+    - Staff
